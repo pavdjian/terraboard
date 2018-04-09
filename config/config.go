@@ -13,7 +13,7 @@ import (
 type Config struct {
 	Version bool `short:"V" long:"version" description:"Display version."`
 
-	Port int `short:"p" long:"port" description:"Port to listen on." default:"8080"`
+    Port int `short:"p" long:"port" description:"Port to listen on." env:"TERRABOARD_PORT" default:"8080"`
 
 	Log struct {
 		Level  string `short:"l" long:"log-level" description:"Set log level ('debug', 'info', 'warn', 'error', 'fatal', 'panic')." env:"TERRABOARD_LOG_LEVEL" default:"info"`
